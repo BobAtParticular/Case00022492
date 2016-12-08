@@ -3,7 +3,7 @@ using NServiceBus;
 
 namespace Case00022492.Messages
 {
-    public class ReportExample : ICommand
+    public class StreamExample : ICommand
     {
         public Guid Id { get; set; }
     }

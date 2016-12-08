@@ -47,7 +47,9 @@
     <Compile Include="CommonNServiceBusConfig.cs" />
     <Compile Include="Messages\CreateExample.cs" />
     <Compile Include="Messages\ExampleCreated.cs" />
-    <Compile Include="Messages\ReportExample.cs" />
+    <Compile Include="Messages\ExampleFinished.cs" />
+    <Compile Include="Messages\FinishExample.cs" />
+    <Compile Include="Messages\StreamExample.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

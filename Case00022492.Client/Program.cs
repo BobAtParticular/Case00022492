@@ -17,7 +17,6 @@ namespace Case00022492.Client
             using (var bus = Bus.CreateSendOnly(busConfiguration))
             {
                 ConsoleKeyInfo cki;
-                var id = Guid.NewGuid();
                 Console.WriteLine("Press 1 to Send a Command");
                 Console.WriteLine("Press ESC to stop");
                 do
@@ -27,7 +26,7 @@ namespace Case00022492.Client
 
                     var command = new CreateExample
                     {
-                        Id = id
+                        Id = Guid.NewGuid()
                     };
 
                     bus.Send("Case00022492.Host", command);

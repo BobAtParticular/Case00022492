@@ -69,11 +69,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config\ConfigErrorQueue.cs" />
+    <Compile Include="Config\ConfigRecoverability.cs" />
     <Compile Include="Handlers\CreateExampleHandler.cs" />
     <Compile Include="Handlers\ExampleCreatedHandler.cs" />
-    <Compile Include="Handlers\ReportExampleHandler.cs" />
+    <Compile Include="Handlers\ExampleFinishedHandler.cs" />
+    <Compile Include="Handlers\FinishExampleHandler.cs" />
+    <Compile Include="Handlers\StreamExampleHandler.cs" />
     <Compile Include="Model\Example.cs" />
-    <Compile Include="Config\NEventStoreStartup.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Config\StartNES.cs" />

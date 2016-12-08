@@ -15,9 +15,12 @@ namespace Case00022492.Host.Handlers
 
         public void Handle(ExampleCreated message)
         {
-            Console.WriteLine($"Example created handled for Id {message.Id} created {message.Created}");
+            Console.WriteLine($"ExampleCreated handled for Id {message.Id} created {message.Created}");
 
-            _bus.SendLocal<ReportExample>(cmd => cmd.Id = message.Id);
+            _bus.SendLocal(new FinishExample
+            {
+                Id = message.Id
+            });
         }
     }
 }

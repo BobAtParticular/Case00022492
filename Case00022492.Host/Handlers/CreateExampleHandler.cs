@@ -18,7 +18,11 @@ namespace Case00022492.Host.Handlers
         public void Handle(CreateExample message)
         {
             Console.WriteLine($"CreateExample Command Handled for {message.Id} created {message.Created}");
-            _repository.Add(new Example(message.Id, message.Created));
+            var example = _repository.Get<Example>(message.Id);
+            if (example == null)
+            {
+                _repository.Add(new Example(message.Id, message.Created));
+            }
         }
     }
 }
